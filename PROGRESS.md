@@ -2,7 +2,7 @@
 
 > This file is read and updated by the AI tutor. It tracks which lesson you're on so you can say "continue" and pick up where you left off.
 
-## Current Step: 11
+## Current Step: 13
 
 ## Log
 
@@ -18,4 +18,6 @@
 <!-- 8 | done | 2026-03-18 | Practiced space complexity: variables (O(1)), growing data structures (O(n)), in-place (O(1)) -->
 <!-- 9 | done | 2026-03-18 | Section 2 practice: analyzed hidden complexity, space vs time, hash map optimizations -->
 <!-- 10 | done | 2026-03-18 | Section 2 cheatsheet: complexity reference, data structures, problem patterns |
-<!-- 11 | current | | -->
+<!-- 11 | done | | Arrays intro and core patterns covered -->
+<!-- 12 | done | | Arrays practice partially reviewed -->
+<!-- 13 | current | | -->

@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect } from "vitest";
 
 /**
  * LeetCode 1: Two Sum
@@ -13,28 +13,35 @@ import { describe, it, expect } from 'vitest';
  * - nums = [3, 3], target = 6 → [0, 1] (because nums[0] + nums[1] = 3 + 3 = 6)
  */
 export function twoSum(nums: number[], target: number): number[] {
-  // TODO: Implement this function
-  // Return the indices of the two numbers that add up to target
-
-  // Write your code here
-
-  return [];
+    // TODO: Implement this function
+    // Return the indices of the two numbers that add up to target
+    let lookup = new Map();
+    for (let i = 0; i < nums.length; i++) {
+        let match = target - nums[i];
+        if (!lookup.has(match)) {
+            lookup.set(nums[i], i);
+        } else {
+            return [lookup.get(match), i];
+        }
+    }
+    // Write your code here
+    return [];
 }
 
-describe('twoSum', () => {
-  it('finds two sum indices', () => {
-    expect(twoSum([2, 7, 11, 15], 9)).toEqual([0, 1]);
-  });
+describe("twoSum", () => {
+    it("finds two sum indices", () => {
+        expect(twoSum([2, 7, 11, 15], 9)).toEqual([0, 1]);
+    });
 
-  it('finds two sum with non-adjacent elements', () => {
-    expect(twoSum([3, 2, 4], 6)).toEqual([1, 2]);
-  });
+    it("finds two sum with non-adjacent elements", () => {
+        expect(twoSum([3, 2, 4], 6)).toEqual([1, 2]);
+    });
 
-  it('handles duplicate elements', () => {
-    expect(twoSum([3, 3], 6)).toEqual([0, 1]);
-  });
+    it("handles duplicate elements", () => {
+        expect(twoSum([3, 3], 6)).toEqual([0, 1]);
+    });
 
-  it('handles larger array', () => {
-    expect(twoSum([1, 5, 3, 7, 2], 9)).toEqual([1, 3]);
-  });
+    it("handles larger array", () => {
+        expect(twoSum([1, 5, 3, 7, 2], 9)).toEqual([3, 4]);
+    });
 });
